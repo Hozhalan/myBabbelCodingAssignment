@@ -10,7 +10,7 @@ public class WebDriverLibrary {
     protected static WebDriver driver;
 
     public static WebDriver getChromeDriver() {
-        WebDriverManager.chromedriver().setup();
+        WebDriverManager.chromiumdriver().setup();
         ChromeOptions options = new ChromeOptions();
         //options.setHeadless(Boolean.parseBoolean(System.getProperty("headlessMode")));
         driver = new ChromeDriver(options);
