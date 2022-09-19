@@ -14,6 +14,8 @@ public class LoginPage {
     protected By btnContinue = By.xpath("//span/input[@id='continue']/..");
     protected By btnSignIn = By.xpath("//input[@id='signInSubmit']/..");
 
+    protected By checkBoxRememberMe = By.xpath("//input[@name='rememberMe']");
+
     public LoginPage(WebDriver driver) {
         this.driver = driver;
     }
@@ -26,6 +28,7 @@ public class LoginPage {
     public void enterThePassword(String password) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         wait.until(ExpectedConditions.elementToBeClickable(txtPassword)).sendKeys(password);
+        wait.until(ExpectedConditions.elementToBeClickable(checkBoxRememberMe)).click();
     }
 
     public HomePage clickLoginNowButton() {

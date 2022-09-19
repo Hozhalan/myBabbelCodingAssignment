@@ -12,6 +12,8 @@ public class WebDriverLibrary {
     public static WebDriver getChromeDriver() {
         WebDriverManager.chromiumdriver().setup();
         ChromeOptions options = new ChromeOptions();
+        options.addArguments("disable-infobars");
+        options.addArguments("start-maximized");
         //options.setHeadless(Boolean.parseBoolean(System.getProperty("headlessMode")));
         driver = new ChromeDriver(options);
         driver.manage().window().maximize();

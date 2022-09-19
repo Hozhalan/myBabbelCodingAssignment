@@ -20,13 +20,13 @@ public class SelectedItemPage {
     }
 
     public void addMultipleQuantity() {
-        wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOfElementLocated(dropDownForItemQuantity)).click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(dropDownForItemQuantityValues)).click();
     }
 
     public void clickOnTheAddToCartButton() {
-        wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOfElementLocated(btnAddToCart)).click();
     }
 
